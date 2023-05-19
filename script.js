@@ -39,7 +39,7 @@ let list = Array.from(document.getElementsByTagName("span"));
 list.forEach((item) => {
   item.addEventListener("click", (e) => {
     e.target.parentElement.style.display = "none";
-    document.getElementById("one").lastElementChild.style.color = 'red';
+    document.getElementById("one").lastElementChild.style.color = "red";
   });
 });
 
@@ -50,6 +50,7 @@ document.body.querySelector("button").addEventListener("click", function (e) {
   let li = document.createElement("li");
   li.innerHTML = con + "<span>X</span>";
   document.getElementById("one").appendChild(li);
+  // console.log(li.textContent.slice(0,-1));
 
   // removing an element from the list
 
@@ -57,8 +58,21 @@ document.body.querySelector("button").addEventListener("click", function (e) {
   list.forEach((item) => {
     item.addEventListener("click", (e) => {
       e.target.parentElement.style.display = "none";
-      document.getElementById("one").lastElementChild.style.color = 'red';
-      
+      document.getElementById("one").lastElementChild.style.color = "red";
     });
+  });
+});
+
+// Searching for an item
+document.body.querySelector("input").addEventListener("input", function (e) {
+  console.log(e.target.value);
+  let list = Array.from(document.getElementsByTagName("li"));
+  // console.log(list);
+  list.forEach((li) => {
+    // li.innerText.slice(0, -1);
+    console.log(li.firstChild.nodeValue);
+    if (! li.firstChild.nodeValue.includes(e.target.value)) li.style.display = "none";
+    else
+    li.style.display = "block";
   });
 });
