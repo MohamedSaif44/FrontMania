@@ -1,0 +1,42 @@
+/* what is the diff between innerText&CreateTextNode */
+/* how the e argument is passed to event functions */
+.filter {
+    display: flex;
+    flex-flow: row nowrap;
+    width: 100%;
+    justify-content: flex-start;
+    align-items: flex-end;
+    background-color: rgb(77, 126, 3);
+}
+
+body>* {
+    box-sizing: border-box;
+}
+
+#filter {
+    align-self: flex-end;
+    margin-block: auto;
+    margin-left: auto;
+}
+
+#one {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 1px;
+}
+
+li {
+    list-style: none;
+    background-color: #f4f4f4;
+    border-inline: 2px solid black;
+    border-block: 1px solid black;
+}
+span{
+    color: #000;
+    float: right;
+    background-color: red;
+    padding: 1px;
+}
+/* li:last-child{
+    border-bottom: 2px solid #000;
+} */
