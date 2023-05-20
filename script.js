@@ -1,39 +1,5 @@
-// document.getElementById("one").addEventListener("mouseenter", function (e) {
-// //   console.log("mouse enter");
-// //   console.log(e.target);
-// // });
-
-// // document.getElementById("one").addEventListener("mouseover", function (e) {
-// //   console.log("mouse over");
-// //   console.log(e.target);
-// // });
-
-// document.getElementById("one").addEventListener("mouseenter", function (e) {
-//   console.log("mouse enter");
-//   console.log(e.target);
 
 //   e.target.style["background-color"] = "blue";
-// });
-
-// document.getElementById("one").addEventListener("mouseover", function (e) {
-//   console.log("mouse over");
-//   e.target.style.color = "white";
-//   e.target.style.border = "4px double black";
-//   // setTimeout(() => {
-//   //   e.target.style.color = "";
-//   //   e.target.style.border = "";
-//   // }, 500);
-//   console.log(e.target);
-// });
-
-// document.getElementById("one").addEventListener("mouseout", function (e) {
-//   console.log("mouse out");
-//   setTimeout(() => {
-//     e.target.style.color = "";
-//     e.target.style.border = "";
-//   }, 70);
-//   console.log(e.target);
-// });
 // that code seems redundant ,but if we want to be able to remove items before adding any,then i think this is the only way
 let list = Array.from(document.getElementsByTagName("span"));
 list.forEach((item) => {
@@ -65,12 +31,12 @@ document.body.querySelector("button").addEventListener("click", function (e) {
 
 // Searching for an item
 document.body.querySelector("input").addEventListener("input", function (e) {
-  console.log(e.target.value);
+  // console.log(e.target.value);
   let list = Array.from(document.getElementsByTagName("li"));
   // console.log(list);
   list.forEach((li) => {
     // li.innerText.slice(0, -1);
-    console.log(li.firstChild.nodeValue);
+    // console.log(li.firstChild.nodeValue);
     if (! li.firstChild.nodeValue.includes(e.target.value)) li.style.display = "none";
     else
     li.style.display = "block";
